@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "250893828243",
+    "project_id": "mecourse-fb1fc",
+    "storage_bucket": "mecourse-fb1fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250893828243:android:096bd27c1418b2afa74d66",
+        "android_client_info": {
+          "package_name": "org.aplas.mecourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250893828243-tctjkh1qju406lhk0lth9fphbbjlo74c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdTbNleD_j4QtDLpAydPjwYpo2xezAZek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250893828243-tctjkh1qju406lhk0lth9fphbbjlo74c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
