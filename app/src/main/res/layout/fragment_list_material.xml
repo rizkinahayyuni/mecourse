@@ -44,7 +44,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="20sp"
-        android:fontFamily="@font/montserratBold"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:paddingLeft="10dp"

@@ -31,7 +31,7 @@
         android:text="Title Title Title"
         android:textColor="@color/anchor_navy"
         android:textStyle="bold"
-        android:fontFamily="@font/montserratSemiBold"
+        android:fontFamily="@font/montserrat_semi_bold"
         android:gravity="center"
         android:textSize="15sp"
         />

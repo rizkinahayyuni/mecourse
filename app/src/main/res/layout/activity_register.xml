@@ -43,7 +43,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/anchor_navy"
-            android:fontFamily="@font/montserratBold"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             />
 
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:textSize="15sp"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:hint="Name"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_person_icon"
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:textSize="15sp"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:hint="Phone"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_phone_icon"
@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:textSize="15sp"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:hint="E-Mail"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_email_icon"
@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:textSize="15sp"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:hint="Password"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_password_icon"
@@ -116,7 +116,7 @@
             android:text="REGISTER"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:fontFamily="@font/montserratSemiBold"
+            android:fontFamily="@font/montserrat_semi_bold"
             android:elevation="10dp"
             android:stateListAnimator="@null"
             />
@@ -136,7 +136,7 @@
                 android:text="Already have an account? "
                 android:textSize="15sp"
                 android:textColor="@color/anchor_navy"
-                android:fontFamily="@font/montserratLight"
+                android:fontFamily="@font/montserrat_light"
                 android:gravity="center"
                 />
 
@@ -147,7 +147,7 @@
                 android:text="Sign In"
                 android:textSize="15sp"
                 android:textColor="@color/link_navy"
-                android:fontFamily="@font/montserratLight"
+                android:fontFamily="@font/montserrat_light"
                 android:layout_marginLeft="5dp"
                 />
 

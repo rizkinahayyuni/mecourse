@@ -33,7 +33,7 @@
         android:textSize="20sp"
         android:textColor="@color/anchor_navy"
         android:textStyle="bold"
-        android:fontFamily="@font/montserratBold"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_marginTop="20dp"
         android:gravity="center"
         />
@@ -61,7 +61,7 @@
             android:text="E-mail"
             android:textSize="15sp"
             android:textColor="@color/anchor_navy"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:layout_gravity="center"
             />
     </LinearLayout>
@@ -88,7 +88,7 @@
             android:text="-"
             android:textSize="15sp"
             android:textColor="@color/anchor_navy"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:layout_gravity="center"
             />
     </LinearLayout>
@@ -115,7 +115,7 @@
             android:text="-"
             android:textSize="15sp"
             android:textColor="@color/anchor_navy"
-            android:fontFamily="@font/montserratRegular"
+            android:fontFamily="@font/montserrat_regular"
             android:layout_gravity="center"
             />
     </LinearLayout>
@@ -137,7 +137,7 @@
             android:text="EDIT"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:fontFamily="@font/montserratSemiBold"
+            android:fontFamily="@font/montserrat_semi_bold"
             android:elevation="10dp"
             android:stateListAnimator="@null"
             android:backgroundTint="#4BC076"
@@ -152,7 +152,7 @@
             android:text="LOGOUT"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:fontFamily="@font/montserratSemiBold"
+            android:fontFamily="@font/montserrat_semi_bold"
             android:backgroundTint="#EA676D"
             android:elevation="10dp"
             android:stateListAnimator="@null"

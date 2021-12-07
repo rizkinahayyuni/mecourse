@@ -16,7 +16,7 @@
         android:textColor="@color/anchor_navy"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:fontFamily="@font/montserratBold"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"/>
 
@@ -26,7 +26,7 @@
         android:text="What do you want to learn today?"
         android:textColor="#9D9D9D"
         android:textSize="12sp"
-        android:fontFamily="@font/montserratLight"
+        android:fontFamily="@font/montserrat_light"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"/>
@@ -38,7 +38,7 @@
         android:textColor="@color/anchor_navy"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:fontFamily="@font/montserratSemiBold"
+        android:fontFamily="@font/montserrat_semi_bold"
         android:layout_marginLeft="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView

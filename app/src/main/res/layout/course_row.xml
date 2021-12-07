@@ -44,7 +44,7 @@
                 android:textColor="@color/anchor_navy"
                 android:textStyle="bold"
                 android:textSize="15sp"
-                android:fontFamily="@font/montserratSemiBold"
+                android:fontFamily="@font/montserrat_semi_bold"
                 />
 
         </LinearLayout>

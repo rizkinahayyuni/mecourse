@@ -16,7 +16,7 @@
         android:textColor="@color/anchor_navy"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:fontFamily="@font/montserratBold"
+        android:fontFamily="@font/montserrat_semi_bold"
         />
 
     <androidx.recyclerview.widget.RecyclerView
