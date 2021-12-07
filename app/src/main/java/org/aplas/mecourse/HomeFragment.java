@@ -55,6 +55,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        TextView txtUser = (TextView)view.findViewById(R.id.txt_user_home);
+
         rvCategory = (RecyclerView)view.findViewById(R.id.rv_category);
         rvCategory.setLayoutManager(new GridLayoutManager(getContext(),3));
 

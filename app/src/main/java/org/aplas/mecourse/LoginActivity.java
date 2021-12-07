@@ -86,15 +86,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    String uid = user.getUid();
-                    String name = user.getDisplayName();
-
-                    Bundle bundle = new Bundle();
-                    bundle.putString("uid", uid);
-                    bundle.putString("name", name);
                     Intent intent   = new Intent(LoginActivity.this, HomeActivity.class);
-                    intent.putExtras(bundle);
                     startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this, "Failed to login! Please check your credentials", Toast.LENGTH_LONG).show();

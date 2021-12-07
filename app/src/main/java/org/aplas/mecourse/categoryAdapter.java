@@ -1,5 +1,7 @@
 package org.aplas.mecourse;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,13 +27,13 @@ public class categoryAdapter extends FirebaseRecyclerAdapter<categoryModel, cate
         holder.catTitle.setText(model.getName());
         Glide.with(holder.imgCategory.getContext()).load(model.getIurl()).into(holder.imgCategory);
 
-//        holder.imgCourse.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                AppCompatActivity activity =  (AppCompatActivity)view.getContext();
-//                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, new ListMaterialFragment(model.getTitle(),model.getIurl())).addToBackStack(null).commit();
-//            }
-//        });
+        holder.imgCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity =  (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, new ListCategoryFragment(model.getName(),model.getIurl())).addToBackStack(null).commit();
+            }
+        });
     }
 
     @NonNull

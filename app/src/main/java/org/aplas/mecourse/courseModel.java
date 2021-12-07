@@ -1,11 +1,13 @@
 package org.aplas.mecourse;
 
 public class courseModel {
-    private String title, iurl;
+    private String title;
+    private String iurl;
+    private String category;
 
     public courseModel(){}
 
-    public courseModel(String title, String iurl,long countlesson) {
+    public courseModel(String title, String iurl) {
         this.title = title;
         this.iurl = iurl;
     }
@@ -24,5 +26,13 @@ public class courseModel {
 
     public void setIurl(String iurl) {
         this.iurl = iurl;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
