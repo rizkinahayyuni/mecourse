@@ -128,21 +128,29 @@
 
         <Button
             android:id="@+id/btn_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
             android:text="EDIT"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:stateListAnimator="@null"
             android:backgroundTint="#4BC076"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="10dp"
             android:padding="5dp"
             />
 
         <Button
             android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
             android:text="LOGOUT"
+            android:textSize="20dp"
+            android:textStyle="bold"
             android:backgroundTint="#EA676D"
-            android:layout_marginLeft="50dp"
+            android:elevation="10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginLeft="10dp"
             android:padding="5dp"
             />
 

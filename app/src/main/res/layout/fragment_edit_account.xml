@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditAccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/anchor_navy"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="15sp"
+            android:hint="Name"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_person_icon"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="15sp"
+            android:hint="E-Mail"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_email_icon"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="15sp"
+            android:hint="Phone"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_phone_icon"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_location"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="15sp"
+            android:hint="Location"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_location_icon"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/anchor_navy"
+            android:layout_marginTop="30dp"
+            android:text="UPDATE"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:stateListAnimator="@null"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
