@@ -15,7 +15,9 @@
         android:text="Category ..."
         android:textColor="@color/anchor_navy"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/montserratBold"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recview_listcategory"

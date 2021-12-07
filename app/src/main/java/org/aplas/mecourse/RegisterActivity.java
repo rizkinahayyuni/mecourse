@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText edt_name,edt_age, edt_email, edt_password;
+    private EditText edt_name,edt_phone, edt_email, edt_password;
     private Button register;
     private TextView to_login;
     private FirebaseAuth mAuth;
@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         mAuth = FirebaseAuth.getInstance();
 
         edt_name = (EditText) findViewById(R.id.edt_name);
-        edt_age = (EditText) findViewById(R.id.edt_age);
+        edt_phone = (EditText) findViewById(R.id.edt_phone);
         edt_email = (EditText) findViewById(R.id.edt_email);
         edt_password = (EditText) findViewById(R.id.edt_password);
 
@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private void registerUser() {
         String name = edt_name.getText().toString().trim();
-        String age = edt_age.getText().toString().trim();
+        String phone = edt_phone.getText().toString().trim();
         String email = edt_email.getText().toString().trim();
         String password = edt_password.getText().toString().trim();
 
@@ -68,9 +68,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if (age.isEmpty()) {
-            edt_age.setError("Phone is required");
-            edt_age.requestFocus();
+        if (phone.isEmpty()) {
+            edt_phone.setError("Phone is required");
+            edt_phone.requestFocus();
             return;
         }
 
@@ -103,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            User user = new User(name,age,email);
+                            User user = new User(name,phone,email);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

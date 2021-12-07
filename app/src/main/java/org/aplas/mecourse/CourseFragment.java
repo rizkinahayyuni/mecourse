@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class CourseFragment extends Fragment {
@@ -27,7 +28,9 @@ public class CourseFragment extends Fragment {
     RecyclerView recview;
     courseAdapter adapter;
     EditText txt_src;
-    ImageButton btn_src,btn_clr;
+    ImageButton btn_src,btn_clr,btn_fav;
+    DatabaseReference favoriteref;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     public CourseFragment() {
         // Required empty public constructor

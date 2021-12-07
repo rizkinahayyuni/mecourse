@@ -50,6 +50,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/anchor_navy"
+                android:fontFamily="@font/montserratBold"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"/>
 
@@ -88,6 +89,7 @@
                 android:text=" "
                 android:textSize="16sp"
                 android:textColor="@color/anchor_navy"
+                android:fontFamily="@font/montserratRegular"
                 android:justificationMode="inter_word"/>
 
 
@@ -130,6 +132,7 @@
                 android:text=" "
                 android:textSize="16sp"
                 android:textColor="@color/anchor_navy"
+                android:fontFamily="@font/montserratRegular"
                 android:justificationMode="inter_word"/>
 
 
@@ -172,6 +175,7 @@
                 android:text=" "
                 android:textSize="16sp"
                 android:textColor="@color/anchor_navy"
+                android:fontFamily="@font/montserratRegular"
                 android:justificationMode="inter_word"/>
 
 

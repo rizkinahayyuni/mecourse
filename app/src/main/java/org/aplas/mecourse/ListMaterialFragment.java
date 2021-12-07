@@ -70,7 +70,6 @@ public class ListMaterialFragment extends Fragment {
         ImageView imageholder = view.findViewById(R.id.img_banner);
         TextView titleholder = view.findViewById(R.id.txt_title);
         ImageButton btnBack = view.findViewById(R.id.btn_back);
-        ImageButton btnFav = view.findViewById(R.id.btn_fav);
 
         titleholder.setText(title);
         Glide.with(getContext()).load(iurl).into(imageholder);

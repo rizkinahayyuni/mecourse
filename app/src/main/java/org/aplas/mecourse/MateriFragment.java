@@ -146,6 +146,6 @@ public class MateriFragment extends Fragment {
 
     public void onBackPressed() {
         AppCompatActivity activity = (AppCompatActivity)getContext();
-        activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new CourseFragment()).addToBackStack(null).commit();
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new ListMaterialFragment()).addToBackStack(null).commit();
     }
 }

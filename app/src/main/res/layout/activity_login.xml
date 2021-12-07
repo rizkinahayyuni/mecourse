@@ -11,29 +11,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:orientation="vertical"
-        android:background="@color/primary_blue"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:gravity="center"
+        android:background="@drawable/base1"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ME"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/slated_grey"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="COURSE"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/slated_grey"/>
+        <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/logomct"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 
@@ -54,6 +43,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/anchor_navy"
+            android:fontFamily="@font/montserratBold"
             android:gravity="center"
             android:layout_marginTop="20dp"
             />
@@ -64,6 +54,7 @@
             android:layout_height="60dp"
             android:hint="E-mail"
             android:textSize="15sp"
+            android:fontFamily="@font/montserratRegular"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_email_icon"
             android:drawablePadding="12dp"
@@ -78,6 +69,7 @@
             android:layout_height="60dp"
             android:hint="Password"
             android:textSize="15sp"
+            android:fontFamily="@font/montserratRegular"
             android:background="@drawable/custom_input"
             android:inputType="textPassword"
             android:drawableStart="@drawable/custom_password_icon"
@@ -93,6 +85,7 @@
             android:text="Forget Password"
             android:textSize="15sp"
             android:textColor="@color/link_navy"
+            android:fontFamily="@font/montserratRegular"
             android:gravity="end"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
@@ -107,6 +100,7 @@
             android:text="LOGIN"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:fontFamily="@font/montserratSemiBold"
             android:elevation="10dp"
             android:stateListAnimator="@null"
             />
@@ -124,6 +118,7 @@
                 android:text="Don't have an account?"
                 android:textSize="15sp"
                 android:textColor="@color/anchor_navy"
+                android:fontFamily="@font/montserratLight"
                 android:gravity="center"
                 />
 
@@ -134,6 +129,7 @@
                 android:text="Sign Up"
                 android:textSize="15sp"
                 android:textColor="@color/link_navy"
+                android:fontFamily="@font/montserratLight"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
                 />

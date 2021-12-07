@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Hi User,"
         android:textColor="@color/anchor_navy"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        android:fontFamily="@font/montserratBold"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"/>
 
@@ -24,58 +25,11 @@
         android:layout_height="wrap_content"
         android:text="What do you want to learn today?"
         android:textColor="#9D9D9D"
-        android:textSize="15sp"
+        android:textSize="12sp"
+        android:fontFamily="@font/montserratLight"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"/>
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:background="@drawable/custom_search"-->
-<!--            android:layout_marginLeft="20dp"-->
-<!--            android:layout_marginRight="10dp"-->
-<!--            >-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/txt_src_home"-->
-<!--                android:layout_width="260dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/custom_search"-->
-<!--                android:hint="Find a perfect course for you"-->
-<!--                android:textColorHint="@color/secondary_grey"-->
-<!--                android:textSize="15sp"-->
-<!--                android:padding="10dp"-->
-<!--                />-->
-
-<!--            <ImageButton-->
-<!--                android:id="@+id/btn_clear_course"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:src="@drawable/ic_clear"-->
-<!--                android:background="@drawable/custom_search"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:padding="10dp"-->
-<!--                />-->
-
-<!--        </LinearLayout>-->
-
-<!--        <ImageButton-->
-<!--            android:id="@+id/btn_src_home"-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/ic_search"-->
-<!--            android:background="@drawable/custom_search"-->
-<!--            android:padding="10dp"-->
-<!--            />-->
-
-<!--    </LinearLayout>-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,6 +38,7 @@
         android:textColor="@color/anchor_navy"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/montserratSemiBold"
         android:layout_marginLeft="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -2,15 +2,15 @@ package org.aplas.mecourse;
 
 public class User {
 
-    public String name, age, email;
+    public String name, age, email, phone, location;
 
     public User() {
 
     }
 
-    public User(String name, String age, String email) {
+    public User(String name, String phone, String email) {
         this.name = name;
-        this.age = age;
+        this.phone = phone;
         this.email = email;
     }
 
@@ -36,5 +36,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
