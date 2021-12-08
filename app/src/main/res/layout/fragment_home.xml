@@ -8,46 +8,80 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txt_user_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hi User,"
-        android:textColor="@color/anchor_navy"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="What do you want to learn today?"
-        android:textColor="#9D9D9D"
-        android:textSize="12sp"
-        android:fontFamily="@font/montserrat_light"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category"
-        android:textColor="@color/anchor_navy"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:layout_marginLeft="20dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_category"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        />
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_user_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi User,"
+                android:textColor="@color/anchor_navy"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What do you want to learn today?"
+                android:textColor="#9D9D9D"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_light"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@color/anchor_navy"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course For You"
+                android:textColor="@color/anchor_navy"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recommendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

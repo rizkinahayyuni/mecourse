@@ -32,8 +32,8 @@ public class AccountFragment extends Fragment {
     private String userID;
 
     Button btn_logout,btn_edit;
-    TextView txt_username, txt_email, txt_phone, txt_location;
-    String username,email, phone, location;
+    TextView txt_username, txt_email, txt_phone, txt_location, txt_interest;
+    String username,email, phone, location, interest;
 
     public AccountFragment() {
         // Required empty public constructor
@@ -57,6 +57,7 @@ public class AccountFragment extends Fragment {
         txt_email = (TextView)view.findViewById(R.id.txt_email);
         txt_phone = (TextView)view.findViewById(R.id.txt_phone);
         txt_location = (TextView)view.findViewById(R.id.txt_loc);
+        txt_interest = (TextView)view.findViewById(R.id.txt_interest);
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,11 +81,13 @@ public class AccountFragment extends Fragment {
                     email = userProfile.email;
                     phone = userProfile.phone;
                     location = userProfile.location;
+                    interest = userProfile.interest;
 
                     txt_username.setText(username);
                     txt_email.setText(email);
                     txt_phone.setText(phone);
                     txt_location.setText(location);
+                    txt_interest.setText(interest);
                 }
             }
 
@@ -98,7 +101,7 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 AppCompatActivity activity =  (AppCompatActivity)view.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, new EditAccountFragment(userID,username,email,phone,location)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, new EditAccountFragment(userID,username,email,phone,location,interest)).addToBackStack(null).commit();
             }
         });
 

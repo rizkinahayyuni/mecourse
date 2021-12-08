@@ -28,8 +28,8 @@ public class EditAccountFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private String userID, username, email, phone, location;
-    EditText edit_name, edit_email, edit_phone, edit_location;
+    private String userID, username, email, phone, location, interest;
+    EditText edit_name, edit_email, edit_phone, edit_location, edit_interest;
     Button btn_update;
     DatabaseReference reference;
 
@@ -37,12 +37,13 @@ public class EditAccountFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public EditAccountFragment(String ui,String u, String e, String p, String l) {
+    public EditAccountFragment(String ui,String u, String e, String p, String l, String i) {
         this.userID = ui;
         this.username = u;
         this.email = e;
         this.phone = p;
         this.location = l;
+        this.interest = i;
     }
 
     public static EditAccountFragment newInstance(String param1, String param2) {
@@ -77,16 +78,18 @@ public class EditAccountFragment extends Fragment {
         edit_email = (EditText)view.findViewById(R.id.edit_email);
         edit_phone = (EditText)view.findViewById(R.id.edit_phone);
         edit_location = (EditText)view.findViewById(R.id.edit_location);
+        edit_interest = (EditText)view.findViewById(R.id.edit_interest);
 
         edit_name.setText(username);
         edit_email.setText(email);
         edit_phone.setText(phone);
         edit_location.setText(location);
+        edit_interest.setText(interest);
 
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isNameChanged() || isEmailChanged() || isPhoneChanged() || isLocationChanged()) {
+                if (isNameChanged() || isEmailChanged() || isPhoneChanged() || isLocationChanged() || isInterestChanged()) {
                     Toast.makeText(getActivity(),"Data has been updated.",Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getActivity(),"Data is same and can not be updated.",Toast.LENGTH_SHORT).show();
@@ -132,6 +135,16 @@ public class EditAccountFragment extends Fragment {
         if(!location.equals(edit_location.getText().toString())){
             reference.child(userID).child("location").setValue(edit_location.getText().toString());
             location=edit_location.getText().toString();
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean isInterestChanged(){
+        if(!interest.equals(edit_interest.getText().toString())){
+            reference.child(userID).child("interest").setValue(edit_interest.getText().toString());
+            interest=edit_interest.getText().toString();
             return true;
         }else{
             return false;

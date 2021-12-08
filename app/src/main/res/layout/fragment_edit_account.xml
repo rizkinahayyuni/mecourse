@@ -85,6 +85,21 @@
             android:paddingEnd="20dp"
             />
 
+        <EditText
+            android:id="@+id/edit_interest"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Interest"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_favorite_icon"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
         <Button
             android:id="@+id/btn_update"
             android:layout_width="200dp"

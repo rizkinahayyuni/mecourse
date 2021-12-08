@@ -33,10 +33,12 @@ public class HomeFragment extends Fragment {
 
     private FirebaseUser user;
     private DatabaseReference reference;
-    private String userID;
+    private String userID, username, interest;
 
     RecyclerView rvCategory;
+    RecyclerView rvRecommendation;
     categoryAdapter adapter;
+    recommendationAdapter adapter_r;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -75,9 +77,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User userProfile = snapshot.getValue(User.class);
+                interest = "";
+                if (userProfile.interest.equals("")) {
+                    interest = userProfile.interest;
+                }
 
                 if (userProfile != null) {
-                    String username = userProfile.name;
+                    username = userProfile.name;
 
                     txtUser.setText("Hi "+username+",");
                 }
@@ -99,6 +105,19 @@ public class HomeFragment extends Fragment {
 
         adapter = new categoryAdapter(options);
         rvCategory.setAdapter(adapter);
+
+        rvRecommendation = (RecyclerView)view.findViewById(R.id.rv_recommendation);
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        rvRecommendation.setLayoutManager(horizontalLayoutManager);
+
+        FirebaseRecyclerOptions<courseModel> options2 =
+                new FirebaseRecyclerOptions.Builder<courseModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference("course").orderByChild("category").startAt(interest).endAt(interest+"\uf8ff"), courseModel.class)
+                        .build();
+
+        adapter_r = new recommendationAdapter(options2);
+        adapter_r.startListening();
+        rvRecommendation.setAdapter(adapter_r);
 
         return view;
     }

@@ -129,7 +129,7 @@
                 android:text="Sign Up"
                 android:textSize="15sp"
                 android:textColor="@color/link_navy"
-                android:fontFamily="@font/montserratLight"
+                android:fontFamily="@font/montserrat_light"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
                 />

@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText edt_name,edt_phone, edt_email, edt_password;
+    private EditText edt_name,edt_interest, edt_email, edt_password;
     private Button register;
     private TextView to_login;
     private FirebaseAuth mAuth;
@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         mAuth = FirebaseAuth.getInstance();
 
         edt_name = (EditText) findViewById(R.id.edt_name);
-        edt_phone = (EditText) findViewById(R.id.edt_phone);
+        edt_interest = (EditText) findViewById(R.id.edt_phone);
         edt_email = (EditText) findViewById(R.id.edt_email);
         edt_password = (EditText) findViewById(R.id.edt_password);
 
@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private void registerUser() {
         String name = edt_name.getText().toString().trim();
-        String phone = edt_phone.getText().toString().trim();
+        String interest = edt_interest.getText().toString().trim();
         String email = edt_email.getText().toString().trim();
         String password = edt_password.getText().toString().trim();
 
@@ -66,63 +66,68 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             edt_name.setError("Name is required");
             edt_name.requestFocus();
             return;
-        }
-
-        if (phone.isEmpty()) {
-            edt_phone.setError("Phone is required");
-            edt_phone.requestFocus();
+        } else if (interest.isEmpty()) {
+            edt_interest.setError("Phone is required");
+            edt_interest.requestFocus();
             return;
-        }
-
-        if (email.isEmpty()) {
+        } else if (email.isEmpty()) {
             edt_email.setError("E-mail is required");
             edt_email.requestFocus();
             return;
-        }
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             edt_email.setError("Please provide valid E-mail!");
             edt_email.requestFocus();
             return;
-        }
-
-        if (password.isEmpty()) {
+        } else if (password.isEmpty()) {
             edt_password.setError("Password is required");
             edt_password.requestFocus();
             return;
-        }
-
-        if (password.length() < 6) {
+        }else if (password.length() < 6) {
             edt_password.setError("Min Password length should be 6 characters!");
             edt_password.requestFocus();
             return;
-        }
+        } else {
+//            mAuth.createUserWithEmailAndPassword(edt_email.getText().toString(),edt_password.getText().toString())
+//                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task) {
+//                            if (!task.isSuccessful()){
+//                                Toast.makeText(RegisterActivity.this,
+//                                        "Register gagal karena "+ task.getException().getMessage(),
+//                                        Toast.LENGTH_LONG).show();
+//                            }else {
+//                                //jika sukses akan menuju ke login activity
+//                                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+//                            }
+//                        }
+//                    });
 
-        mAuth.createUserWithEmailAndPassword(edt_email.getText().toString(),edt_password.getText().toString())
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            User user = new User(name,phone,email);
+            mAuth.createUserWithEmailAndPassword(edt_email.getText().toString(),edt_password.getText().toString())
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                User user = new User(name,interest,email);
 
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-                                        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                                        Toast.makeText(RegisterActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
-                                    } else {
-                                        Toast.makeText(RegisterActivity.this, "Failed to register! Try again!!!", Toast.LENGTH_LONG).show();
+                                FirebaseDatabase.getInstance().getReference("Users")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                        .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                                            Toast.makeText(RegisterActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                        } else {
+                                            Toast.makeText(RegisterActivity.this, "Failed to register! Try again!!!", Toast.LENGTH_LONG).show();
+                                        }
                                     }
-                                }
-                            });
-                        }
+                                });
+                            }
 //                        else {
 //                            Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
 //                        }
-                    }
-                });
+                        }
+                    });
+        }
     }
 }
